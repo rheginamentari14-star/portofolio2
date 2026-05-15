@@ -1,0 +1,244 @@
+<!-- 5. <!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rhegina Mentari | Pinky Portfolio</title>
+    <!-- Tailwind CSS CDN v4 -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Font Awesome untuk Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap');
+        
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background: #fff5f7; /* Background pink lembut */
+        }
+
+        .heart-bg {
+            background-image: url("https://www.transparenttextures.com/patterns/hearts.png");
+        }
+
+        .copied { 
+            background-color: #f472b6 !important; 
+            color: white !important; 
+            border-color: #f472b6 !important;
+        }
+    </style>
+</head>
+<body class="heart-bg antialiased text-slate-700">
+
+    <!-- 1. PROFILE / BIO HEADER -->
+    <section class="max-w-md mx-auto bg-white/90 pt-12 pb-8 px-6 text-center border-x border-pink-100 shadow-lg relative overflow-hidden">
+        <!-- Hiasan Hati Pojok -->
+        <div class="absolute -top-5 -right-5 text-pink-200 opacity-50 rotate-12">
+            <i class="fas fa-heart text-6xl"></i>
+        </div>
+        
+        <div class="relative inline-block">
+            <!-- Foto Profil dengan Ring Pink -->
+            <img src="WhatsApp Image 2026-04-29 at 22.35.43.jpeg"
+                 alt="Foto Rhegina" 
+                 class="w-28 h-28 rounded-full mx-auto object-cover ring-4 ring-pink-400 ring-offset-4 shadow-xl">
+            <div class="absolute -bottom-1 -right-1 bg-white p-1.5 rounded-full shadow-md">
+                <i class="fas fa-heart text-pink-500 text-xs animate-bounce"></i>
+            </div>
+        </div>
+        
+        <h1 class="text-2xl font-bold mt-5 tracking-tight text-pink-600">Rhegina Mentari</h1>
+        <p class="text-rose-400 font-semibold text-sm mt-1 uppercase tracking-widest flex items-center justify-center gap-1">
+            <i class="fas fa-sparkles text-xs"></i> Fakultas Ilmu Komputer &bull; Sistem Informasi <i class="fas fa-sparkles text-xs"></i>
+        </p>
+        <p class="text-slate-500 text-xs mt-4 px-6 leading-relaxed italic">
+            "Hallo saya rhegina mentari mahasiswa Sistem Informasi universitas mega buana saya suka mengeksplorasi teknologi dan traveling dan saya suka berbagi pengalaman." ✨
+        </p>
+        
+        <!-- LINK INSTAGRAM & COPY LINK -->
+        <div class="mt-6 flex flex-col gap-3 items-center px-4">
+            <!-- Link Instagram -->
+            <a href="https://instagram.com/rhgnamntri.g" target="_blank" rel="noopener noreferrer"
+               class="w-full flex items-center justify-center gap-2 bg-pink-500 hover:bg-pink-600 text-white font-bold text-xs px-4 py-3 rounded-2xl shadow-pink-200 shadow-lg transition-all duration-300 active:scale-95">
+                <i class="fab fa-instagram text-base"></i> @rhgnamntri.g
+            </a>
+            
+            <!-- Tombol Salin Link -->
+            <button onclick="copyToClipboard()" id="btnCopy"
+                    class="w-full flex items-center justify-center gap-2 bg-pink-50 text-pink-500 font-bold text-xs px-4 py-3 rounded-2xl border border-pink-200 hover:bg-pink-100 transition duration-200 cursor-pointer">
+                <i class="fas fa-link"></i> <span id="textCopy">Salin Link Portofolio</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- CONTAINER HALAMAN KEBAWAH -->
+    <main class="max-w-md mx-auto bg-white/95 pb-16 px-6 border-x border-pink-50 min-h-screen space-y-12 shadow-sm">
+        
+        <div class="flex justify-center py-4">
+            <div class="h-1 w-20 bg-pink-100 rounded-full"></div>
+        </div>
+
+        <!-- 2. RIWAYAT PENDIDIKAN -->
+        <section id="pendidikan">
+            <div class="flex items-center gap-3 mb-6">
+                <div class="w-10 h-10 rounded-xl bg-pink-500 flex items-center justify-center text-white shadow-pink-200 shadow-md">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h2 class="text-lg font-bold text-gray-800">Riwayat Pendidikan</h2>
+            </div>
+            
+            <div class="space-y-6 border-l-2 border-pink-100 pl-5 ml-5">
+                <!-- Kuliah Sekarang -->
+                <div class="relative">
+                    <div class="absolute -left-[27px] top-1.5 w-3 h-3 rounded-full bg-pink-500 ring-4 ring-pink-50"></div>
+                    <span class="text-[10px] font-bold text-pink-500 bg-pink-50 px-2 py-1 rounded-md">Sekarang</span>
+                    <h3 class="font-bold text-sm mt-2 text-gray-800">Mahasiswa S1</h3>
+                    <p class="text-xs text-gray-500 font-medium">Sistem Informasi — Fakultas Ilmu Komputer</p>
+                </div>
+                <!-- SMA -->
+                <div class="relative">
+                    <div class="absolute -left-[27px] top-1.5 w-3 h-3 rounded-full bg-pink-200"></div>
+                    <span class="text-[10px] font-medium text-gray-400">2022 - 2025</span>
+                    <h3 class="font-bold text-sm mt-1 text-gray-800">SMK Al-Razi Sinar Harapan</h3>
+                    <p class="text-xs text-gray-500">Jurusan Farmasi</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. KEMAMPUAN (SKILLS) -->
+        <section id="kemampuan">
+            <div class="flex items-center gap-3 mb-6">
+                <div class="w-10 h-10 rounded-xl bg-rose-400 flex items-center justify-center text-white shadow-rose-100 shadow-md">
+                    <i class="fas fa-star"></i>
+                </div>
+                <h2 class="text-lg font-bold text-gray-800">Kemampuan (Skills)</h2>
+            </div>
+            
+            <div class="flex flex-wrap gap-2">
+                <span class="bg-pink-50/60 text-pink-600 text-[11px] font-bold px-3 py-2 rounded-full border border-pink-100 shadow-2xs hover:bg-pink-50 transition">Analisis Sistem</span>
+                <span class="bg-pink-50/60 text-pink-600 text-[11px] font-bold px-3 py-2 rounded-full border border-pink-100 shadow-2xs hover:bg-pink-50 transition">Manajemen Database</span>
+                <span class="bg-pink-50/60 text-pink-600 text-[11px] font-bold px-3 py-2 rounded-full border border-pink-100 shadow-2xs hover:bg-pink-50 transition">HTML & CSS</span>
+                <span class="bg-pink-50/60 text-pink-600 text-[11px] font-bold px-3 py-2 rounded-full border border-pink-100 shadow-2xs hover:bg-pink-50 transition">UI/UX Design</span>
+                <span class="bg-pink-50/60 text-pink-600 text-[11px] font-bold px-3 py-2 rounded-full border border-pink-100 shadow-2xs hover:bg-pink-50 transition">Public Speaking</span>
+                <span class="bg-pink-50/60 text-pink-600 text-[11px] font-bold px-3 py-2 rounded-full border border-pink-100 shadow-2xs hover:bg-pink-50 transition">Data Analysis</span>
+            </div>
+        </section>
+
+        <!-- 4. PENGALAMAN & ORGANISASI -->
+        <section id="pengalaman">
+            <div class="flex items-center gap-3 mb-6">
+                <div class="w-10 h-10 rounded-xl bg-fuchsia-400 flex items-center justify-center text-white shadow-fuchsia-100 shadow-md">
+                    <i class="fas fa-briefcase"></i>
+                </div>
+                <h2 class="text-lg font-bold text-gray-800">Organisasi & Project</h2>
+            </div>
+            
+            <div class="space-y-6">
+                <!-- Pengalaman 1 -->
+                <div class="bg-pink-50/30 p-4 rounded-3xl border border-pink-100 shadow-xs hover:shadow-md transition duration-300">
+                    <img src="organisasi.jpeg" alt="Foto Pengalaman 1" 
+                         class="w-full h-40 object-cover rounded-2xl mb-3 shadow-xs">
+                    <span class="text-[10px] font-bold text-pink-500 bg-white px-3 py-1 rounded-full shadow-2xs uppercase">Organisasi Kampus</span>
+                    <h3 class="font-bold text-sm mt-3 text-gray-800">Bendahara Kelas</h3>
+                    <p class="text-[11px] text-gray-400 font-medium">Periode 2025</p>
+                    <p class="text-xs text-gray-600 mt-1.5 leading-relaxed">
+                        Bertanggung jawab dalam mengelola keuangan kelas, membangun relasi antar lembaga mahasiswa, dan menyusun rilis pers kegiatan.
+                    </p>
+                </div>
+
+                <!-- Pengalaman 2 -->
+                <div class="bg-pink-50/30 p-4 rounded-3xl border border-pink-100 shadow-xs hover:shadow-md transition duration-300">
+                    <img src="Cuplikan layar 2026-05-16 001142.png" alt="Foto Pengalaman 2" 
+                         class="w-full h-40 object-cover rounded-2xl mb-3 shadow-xs">
+                    <span class="text-[10px] font-bold text-fuchsia-500 bg-white px-3 py-1 rounded-full shadow-2xs uppercase">Project</span>
+                    <h3 class="font-bold text-sm mt-3 text-gray-800">UI/UX Designer - Pengembangan Web</h3>
+                    <p class="text-[11px] text-gray-400 font-medium">Mei 2026</p>
+                    <p class="text-xs text-gray-600 mt-1.5 leading-relaxed">
+                        Merancang *user flow* dan prototipe antarmuka aplikasi registrasi seminar menggunakan Figma untuk kebutuhan tugas akhir individu.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. JELAJAH PROVINSI (TRAVELING LOG) -->
+        <section id="provinsi">
+            <div class="flex items-center gap-3 mb-6">
+                <div class="w-10 h-10 rounded-xl bg-rose-400 flex items-center justify-center text-white shadow-rose-100 shadow-md">
+                    <i class="fas fa-map-marked-alt"></i>
+                </div>
+                <h2 class="text-lg font-bold text-gray-800">Traveling Log</h2>
+            </div>
+            <p class="text-xs text-gray-500 mb-4 -mt-2">Jejak perjalanan dan dokumentasi saya di berbagai belahan Indonesia:</p>
+            
+            <div class="grid grid-cols-2 gap-3">
+                <!-- 1. Kalimantan Tengah -->
+                <div class="relative rounded-2xl overflow-hidden h-28 border-2 border-white shadow-md group">
+                    <img src="kalteng.jpeg" alt="Kalimantan Tengah" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-pink-900/70 via-transparent to-transparent flex items-end p-2.5">
+                        <p class="text-white text-[10px] font-bold tracking-wide">Kalimantan Tengah</p>
+                    </div>
+                </div>
+
+                <!-- 2. Papua -->
+                <div class="relative rounded-2xl overflow-hidden h-28 border-2 border-white shadow-md group">
+                    <img src="papua2.jpeg" alt="Papua" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-pink-900/70 via-transparent to-transparent flex items-end p-2.5">
+                        <p class="text-white text-[10px] font-bold tracking-wide">Papua</p>
+                    </div>
+                </div>
+
+                <!-- 3. DKI Jakarta -->
+                <div class="relative rounded-2xl overflow-hidden h-28 border-2 border-white shadow-md group">
+                    <img src="jakarta.jpeg" alt="DKI Jakarta" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-pink-900/70 via-transparent to-transparent flex items-end p-2.5">
+                        <p class="text-white text-[10px] font-bold tracking-wide">DKI Jakarta</p>
+                    </div>
+                </div>
+
+                <!-- 4. Sumatera Utara -->
+                <div class="relative rounded-2xl overflow-hidden h-28 border-2 border-white shadow-md group">
+                    <img src="sumut.jpeg" alt="Sumatera Utara" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-pink-900/70 via-transparent to-transparent flex items-end p-2.5">
+                        <p class="text-white text-[10px] font-bold tracking-wide">Sumatera Utara</p>
+                    </div>
+                </div>
+
+                <!-- 5. Sulawesi Selatan (Lebar Penuh) -->
+                <div class="relative rounded-2xl overflow-hidden h-28 border-2 border-white shadow-md col-span-2 group">
+                    <img src="sulsel2.jpeg" alt="Sulawesi Selatan" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-pink-900/70 via-transparent to-transparent flex items-end p-2.5">
+                        <p class="text-white text-[10px] font-bold tracking-wide">Sulawesi Selatan</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="text-center pt-8 border-t border-pink-100">
+            <p class="text-[10px] text-pink-400 font-bold tracking-widest uppercase">&copy; 2026 &bull; Rhegina Mentari</p>
+            <p class="text-[9px] text-slate-400 mt-1">Made with <i class="fas fa-heart text-pink-500 animate-pulse"></i></p>
+        </footer>
+
+    </main>
+
+    <!-- SCRIPT SALIN LINK -->
+    <script>
+        function copyToClipboard() {
+            const currentUrl = window.location.href;
+            navigator.clipboard.writeText(currentUrl).then(() => {
+                const btn = document.getElementById('btnCopy');
+                const text = document.getElementById('textCopy');
+                
+                btn.classList.add('copied');
+                text.innerText = 'Tersalin Ke Hati! 💖';
+                
+                setTimeout(() => {
+                    btn.classList.remove('copied');
+                    text.innerText = 'Salin Link Portofolio';
+                }, 2000);
+            }).catch(err => {
+                console.error('Gagal menyalin: ', err);
+            });
+        }
+    </script>
+</body>
+</html>
